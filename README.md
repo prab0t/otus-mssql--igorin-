@@ -1,3 +1,3 @@
-Домашние задания курса OTUS "MS SQL Server Developer".
+Домашнее задание курса OTUS "MS SQL Server Developer".
 Группа 2024-03.
 Горин Илья Михайлович.
