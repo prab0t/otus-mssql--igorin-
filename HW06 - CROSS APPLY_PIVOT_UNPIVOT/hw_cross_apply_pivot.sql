@@ -165,7 +165,7 @@ FROM
 	JOIN Sales.InvoiceLines SIL ON SIL.InvoiceID = SI.InvoiceID
 	JOIN Sales.Customers ON Customers.CustomerID = SI.CustomerID
 	CROSS APPLY 
-	(SELECT DISTINCT TOP (2) InvoiceLines.StockItemID,InvoiceLines.UnitPrice		
+	(SELECT DISTINCT TOP (2) WITH TIES InvoiceLines.StockItemID,InvoiceLines.UnitPrice	--добавил with ties	
 		FROM 
 			Sales.Invoices
 			JOIN Sales.InvoiceLines ON InvoiceLines.InvoiceID = Invoices.InvoiceID
