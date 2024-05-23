@@ -9,16 +9,13 @@ sales
 -
   id_sales integer pk
 id_service integer FK >- services.id_service
-name_service varchar FK >- services.name_service
 id_client integer FK >- client.id
-name_client varchar FK >- client.username
   quantity integer
   price integer
-  date_created timestamp
-  expected_date timestamp
-  actual_date timestamp
+  date_created datetime
+  expected_date datetime
+  actual_date datetime
 id_employee integer FK >- employee.id
-name_employee varchar FK >- employee.username
   status integer
 
 client
@@ -27,7 +24,7 @@ client
   username varchar UNIQUE
   phone integer
   email varchar
-  created timestamp
+  created datetime
  
 employee
 ----
@@ -35,8 +32,8 @@ employee
   username varchar UNIQUE
   phone integer
   email varchar
-  created timestamp
-skill integer FK >- skill.id
+  created datetime
+skill integer FK >-< skill.id
   
 skill
 ----
