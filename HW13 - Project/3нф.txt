@@ -33,10 +33,10 @@ employee
   phone integer
   email varchar
   created datetime
-skill integer FK >-< skill.id
+skill integer FK >- skill.id
   
 skill
 ----
   id integer pk
   name varchar
-  speed integer 
+  speed integer
