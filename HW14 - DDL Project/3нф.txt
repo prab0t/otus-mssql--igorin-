@@ -1,0 +1,42 @@
+services
+-
+  id_service integer PK
+  name_service varchar UNIQUE
+  description_service varchar
+price_service integer
+
+sales
+-
+  id_sales integer pk
+id_service integer FK >- services.id_service
+id_client integer FK >- client.id
+  quantity integer
+  price integer
+  date_created datetime
+  expected_date datetime
+  actual_date datetime
+id_employee integer FK >- employee.id
+  status integer
+
+client
+----
+  id integer pk
+  username varchar UNIQUE
+  phone integer
+  email varchar
+  created datetime
+ 
+employee
+----
+  id integer pk
+  username varchar UNIQUE
+  phone integer
+  email varchar
+  created datetime
+skill integer FK >- skill.id
+  
+skill
+----
+  id integer pk
+  name varchar
+  speed integer
